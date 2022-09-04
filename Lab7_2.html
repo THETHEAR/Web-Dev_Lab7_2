@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab7no2</title>
+
+    <script>
+
+        function CAL()
+        {
+            var n1 = document.getElementById("T1").value;
+            var n2 = document.getElementById("T2").value;
+            var oper = document.getElementById("OPER").value;
+
+            if( oper == "+")
+            {
+                var ans = parseInt(n1)+parseInt(n2);
+                document.getElementById("total").value = ans;
+            }
+            else if(oper == "-")
+            {
+                var ans = parseInt(n1)-parseInt(n2);
+                document.getElementById("total").value = ans;
+            }
+            else if(oper == "*")
+            {
+                var ans = parseInt(n1)*parseInt(n2);
+                document.getElementById("total").value = ans;
+            }
+            else 
+            {
+                var ans = parseInt(n1)/parseInt(n2);
+                document.getElementById("total").value = ans;
+            }           
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="T1">
+    <select name="OPER" id="OPER">
+        <option value="+" >+</option>
+        <option value="-" >-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="T2">
+    <label> =</label>
+    <input type="text" id="total">
+    <input type="button" value="Compute" onclick="CAL()">
+</body>
+</html>
